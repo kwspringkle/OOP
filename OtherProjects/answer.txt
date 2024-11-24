@@ -1,0 +1,40 @@
+- - 
+What happens if users choose “Cancel”? 
+How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” 
+and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help).  
+
+1.Khi chọn Cancel trong chương trình này thì đồng nghĩa với việc chọn No
+Nguyên nhân là do điều kiện option==JOptionPane.YES_OPTION?"Yes":"No"; Nếu không phải là Yes option thì sẽ chuyển sang là No
+2.
+import javax.swing.JOptionPane;
+
+public class CustomJOptionPaneExample {
+
+    public static void main(String[] args) {
+        // Example 1: Yes/No options
+        Object[] options1 = {"Yes", "No"};
+        int result1 = JOptionPane.showOptionDialog(null,
+                "Do you want to proceed?",
+                "Custom Yes/No Dialog",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options1,
+                options1[0]);
+
+        System.out.println("Result 1: " + (result1 == JOptionPane.YES_OPTION ? "Yes" : "No"));
+
+        // Example 2: I do/I don't options
+        Object[] options2 = {"I do", "I don't"};
+        int result2 = JOptionPane.showOptionDialog(null,
+                "Do you agree?",
+                "Custom I do/I don't Dialog",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options2,
+                options2[0]);
+
+        System.out.println("Result 2: " + (result2 == JOptionPane.YES_OPTION ? "I do" : "I don't"));
+    }
+}
