@@ -1,4 +1,6 @@
-package aims;
+package test.disc;
+
+import aims.disc.DigitalVideoDisc;
 
 public class TestPassingParameter {
 	public static void main(String[] args) {

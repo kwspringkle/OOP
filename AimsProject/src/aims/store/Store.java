@@ -1,4 +1,6 @@
-package aims;
+package aims.store;
+
+import aims.disc.DigitalVideoDisc;
 
 public class Store {
     private static final int MAX_ITEMS = 100;  
