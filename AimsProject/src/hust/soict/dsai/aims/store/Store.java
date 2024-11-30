@@ -1,6 +1,6 @@
-package aims.store;
+package hust.soict.dsai.aims.store;
 
-import aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Store {
     private static final int MAX_ITEMS = 100;  
