@@ -2,11 +2,19 @@ package hust.soict.dsai.aims.media;
 
 import java.util.*;
 
-public class Book extends Media {
+public class Book extends Media{
 	private List<String> authors = new ArrayList<String>();
 	
 	public Book() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public List<String> getAuthors() {
+		return authors;
+	}
+
+	public void setAuthors(List<String> authors) {
+		this.authors = authors;
 	}
 	
 	//addAuthor
@@ -21,6 +29,7 @@ public class Book extends Media {
 		System.out.println("Author was added sucessfully!");
 	}
 	
+
 	//removeAuthor
 	public void removeAuthor(String authorName) {
 		for(String author : authors) {
@@ -31,16 +40,9 @@ public class Book extends Media {
 		}
 		System.out.println("Author's name not found!");
 	}
-	
-	
-	
-	public List<String> getAuthors() {
-		return authors;
-	}
 
-	public void setAuthors(List<String> authors) {
-		this.authors = authors;
-	}
+	
+	
 
 	
 
