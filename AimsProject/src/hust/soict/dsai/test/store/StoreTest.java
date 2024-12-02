@@ -11,11 +11,11 @@ public class StoreTest {
 	        DigitalVideoDisc dvd2 = new DigitalVideoDisc("The Matrix", "Science Fiction", "Wachowski Sisters", 136, 25.99f);
 	            
 	        // Test adding DVDs
-	        store.addDVD(dvd1);
-	        store.addDVD(dvd2);
+	        store.addMedia(dvd1);
+	        store.addMedia(dvd2);
 	        
 	        // Test removing DVDs
-	        store.removeDVD(dvd1);
-	        store.removeDVD(dvd1);  
+	        store.removeMedia(dvd1);
+	        store.removeMedia(dvd1);  
 	    }
 }
