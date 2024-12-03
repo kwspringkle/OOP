@@ -28,5 +28,10 @@ public class Disc extends Media {
 	public Disc() {
 		// TODO Auto-generated constructor stub
 	}
+	@Override
+	public String toString() {
+        return "Disc - " + getTitle() + " - " + getCategory() + " - Director: " + getDirector() +
+                " - Length: " + getLength() + " mins - Cost: $" + getCost();
+    }
 
 }

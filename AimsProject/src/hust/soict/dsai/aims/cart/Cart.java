@@ -17,7 +17,11 @@ public class Cart {
         return sum;
     }
     
-    //Print the list of ordered items, price and total price
+    public ArrayList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
+
+	//Print the list of ordered items, price and total price
     public void printCart() {
     	System.out.println("***********************CART***********************");
     	System.out.println("Ordered Items:");
@@ -70,6 +74,7 @@ public class Cart {
     	}
     	itemsOrdered.add(media);
     	 System.out.println(media.getTitle() + " has been added");
+    	 
     }
     
     //removeMedia
@@ -79,6 +84,10 @@ public class Cart {
     	}
     	itemsOrdered.remove(media);
     	System.out.println(media.getTitle() + " is removed successfully");
+    }
+    
+    public int getNumItemsInCart() {
+        return itemsOrdered.size();
     }
 }
 

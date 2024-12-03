@@ -19,6 +19,16 @@ public class CompactDisc extends Disc implements Playable {
 		this.tracks = tracks;
 	}
 	
+	public CompactDisc(String title, String category, float cost, int length, String director) {
+		super(title, category, cost, length, director);
+		// TODO Auto-generated constructor stub
+	}
+
+	public CompactDisc(String title, String category, float cost) {
+		super(title, category, cost);
+		// TODO Auto-generated constructor stub
+	}
+
 	//addTrack
 	public void addTrack(Track track) {
 		if(tracks.contains(track)) {
@@ -59,9 +69,16 @@ public class CompactDisc extends Disc implements Playable {
 		System.out.println("DVD length: " + this.getLength());
 		
 		for(Track track : tracks) {
-			play();
+			track.play();
 		}
 	}
+	
+
+	@Override
+	public String toString() {
+        return "CD - " + getTitle() + " - " + getCategory() + " - Director: " + getDirector() +
+                " - Length: " + getLength() + " mins - Cost: $" + getCost();
+    }
 
 	
 

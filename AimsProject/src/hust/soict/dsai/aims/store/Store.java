@@ -29,4 +29,45 @@ public class Store {
     	itemsinStore.remove(media);
     	System.out.println(media.getTitle() + " is removed successfully");
     }
+    
+  //Search for DVDs in the cart by ID
+    public Media searchByID(int id) {
+		 for(Media iteminStore : itemsinStore) {
+			 if(iteminStore.getId() == id) {
+				 System.out.println("Item found:");
+				 System.out.println(iteminStore);
+				 return iteminStore;
+			 }
+		 }
+		 
+		 System.out.println("No match is found!");
+		 return null;
+	 }
+    
+    //Search for DVDs by title 
+    public Media searchByTitle(String title) {
+    	for(Media iteminStore : itemsinStore) {
+			 if(iteminStore.getTitle() == title) {
+				 System.out.println("DVD found:");
+				 System.out.println(itemsinStore);
+				 return iteminStore;
+			 }
+		 }
+		 
+		 System.out.println("No match is found!");
+		 return null;
+    }
+    
+    public void printStore() {
+        System.out.println("***********************STORE***********************");
+        int i = 0; 
+
+        for (Media itemInStore : itemsinStore) {
+            i++; 
+            System.out.printf("%d. %s\n", i, itemInStore); 
+        }
+
+        System.out.println("*************************************************** ");
+    }
+
 }
