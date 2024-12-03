@@ -166,7 +166,7 @@ public class Aims {
 		
 		public static void removeMediafromStore(Scanner scanner, Store store) {
 			 System.out.println("Enter the title of the media to remove from the store:");
-			 String title = scanner.nextLine();
+			 String title = scanner.next();
 			 
 			 Media media = store.searchByTitle(title);
 			 //Nếu tìm thấy media trong store
