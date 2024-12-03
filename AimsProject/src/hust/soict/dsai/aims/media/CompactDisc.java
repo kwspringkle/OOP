@@ -13,8 +13,8 @@ public class CompactDisc extends Disc implements Playable {
 	}
 	
 	//Constructor
-	public CompactDisc(int length, String director, String artist, ArrayList<Track> tracks) {
-		super(length, director);
+	public CompactDisc(String title, String category, float cost, String artist, ArrayList<Track> tracks) {
+		super(title, category, cost);
 		this.artist = artist;
 		this.tracks = tracks;
 	}
