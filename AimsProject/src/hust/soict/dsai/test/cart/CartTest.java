@@ -17,10 +17,14 @@ public class CartTest {
 		//Test print method
 		cart.printCart();
 		//test search method
-		
+		/*
 		cart.searchByID(0);
 		cart.searchByID(2);
 		cart.searchByTitle("Aladin");
 		cart.searchByTitle("Sofia the first");
+		*/
+		System.out.println(dvd1.equals(dvd1));
+		String unrelatedObj = "The Lion King";
+		System.out.println(dvd1.equals(unrelatedObj));
 	}
 }

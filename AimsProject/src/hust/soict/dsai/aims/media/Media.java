@@ -57,6 +57,15 @@ public abstract class Media {
 	public static void setNbDigitalVideoDiscs(int nbDigitalVideoDiscs) {
 		Media.nbDigitalVideoDiscs = nbDigitalVideoDiscs;
 	}
+	
+	@Override
+    public boolean equals(Object object) {
+        if (object instanceof Media) {
+            Media other = (Media) object;
+            return this.title.equalsIgnoreCase(other.getTitle());
+        }
+        return false;
+    }
 
 	public Media() {
 		// TODO Auto-generated constructor stub
