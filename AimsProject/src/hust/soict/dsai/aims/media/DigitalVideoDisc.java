@@ -26,10 +26,7 @@ public class DigitalVideoDisc extends Disc implements Playable{
 	public int getLength() {
 		return length;
 	}
-	public String toString() {
-        return "DVD - " + getTitle() + " - " + getCategory() + " - Director: " + getDirector() +
-                " - Length: " + getLength() + " mins - Cost: $" + getCost();
-    }
+	
 	@Override
 	public void play() {
 		// TODO Auto-generated method stub
@@ -37,4 +34,10 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		System.out.println("DVD length: " + this.getLength());
 
 	}
+	
+	@Override
+	public String toString() {
+        return "DVD - " + getTitle() + " - " + getCategory() + " - Director: " + getDirector() +
+                " - Length: " + getLength() + " mins - Cost: $" + getCost();
+    }
 }

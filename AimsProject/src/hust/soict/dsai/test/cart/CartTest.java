@@ -1,7 +1,13 @@
 package hust.soict.dsai.test.cart;
+import hust.soict.dsai.aims.media.*;
+import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
 
+import hust.soict.dsai.aims.media.*;
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import java.util.ArrayList;
 
 public class CartTest {
 	public static void main(String[] args) {
@@ -26,5 +32,17 @@ public class CartTest {
 		System.out.println(dvd1.equals(dvd1));
 		String unrelatedObj = "The Lion King";
 		System.out.println(dvd1.equals(unrelatedObj));
+		
+		
+		List<Media> mediae = new ArrayList<Media>();
+		
+		mediae.add(dvd1);
+		mediae.add(dvd2);
+		mediae.add(dvd3);
+		
+		for(Media m : mediae) {
+			System.out.println(m.toString());
+		}
+		
 	}
 }
