@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.CompactDisc;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
@@ -62,18 +63,21 @@ public class StoreScreen extends JFrame {
 	}
 	
 	
-	JPanel createCenter() {
-		JPanel center = new JPanel();
-		center.setLayout(new GridLayout(3,3,2,2));
-		
-		ArrayList<Media> mediaInStore = store.getItemsinStore();
-		
-		for(int i = 0; i < 9; i++) {
-			MediaStore cell = new MediaStore(mediaInStore.get(i));
-			center.add(cell);
-		}
-		
-		return center;
+	public JPanel createCenter() {
+	    JPanel center = new JPanel();
+	    center.setLayout(new GridLayout(3, 3, 2, 2));
+
+	    ArrayList<Media> mediaInStore = store.getItemsinStore();
+	    
+	    Cart cart = new Cart();  // Khởi tạo giỏ hàng (nếu chưa có)
+
+	    for(int i = 0; i < 9 && i < mediaInStore.size(); i++) {
+	        Media media = mediaInStore.get(i);
+	        MediaStore cell = new MediaStore(media, cart);  // Truyền cart vào MediaStore
+	        center.add(cell);
+	    }
+
+	    return center;
 	}
 	
 	public StoreScreen(Store store) {
