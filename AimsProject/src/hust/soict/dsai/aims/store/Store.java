@@ -7,8 +7,12 @@ import hust.soict.dsai.aims.media.DigitalVideoDisc;
 public class Store {
     private static final int MAX_ITEMS = 100;  
     private ArrayList<Media> itemsinStore = new ArrayList<Media>();
+    
+    public ArrayList<Media> getItemsinStore() {
+		return itemsinStore;
+	}
 
-    public void addMedia(Media media) {
+	public void addMedia(Media media) {
         if (itemsinStore.size() >= MAX_ITEMS) {
             System.out.println("The store is full!");
             return;
